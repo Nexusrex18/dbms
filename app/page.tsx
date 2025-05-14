@@ -68,7 +68,7 @@ export default function HomePage() {
           <Link href="/" className="flex items-center gap-2">
             <Shield className="h-8 w-8 text-orange-500" />
             <span className="font-bold text-2xl tracking-tight">
-              care<span className="text-orange-500">Alert</span>
+              Safe<span className="text-orange-500">Nest</span>
             </span>
           </Link>
 
@@ -164,7 +164,7 @@ export default function HomePage() {
               Your Safety Is Our <span className="text-orange-500">Priority</span>
             </h1>
             <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto">
-              careAlert provides immediate assistance in emergency situations, connecting you with the help you need
+              SafeNest provides immediate assistance in emergency situations, connecting you with the help you need
               when you need it most.
             </p>
 
@@ -198,7 +198,7 @@ export default function HomePage() {
         {/* Features Section */}
         <section className="py-20 bg-black/50 backdrop-blur-sm">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">How careAlert Protects You</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">How SafeNest Protects You</h2>
 
             <div className="grid md:grid-cols-3 gap-8">
               <motion.div
@@ -263,7 +263,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
               >
                 <p className="italic text-white/80 mb-4">
-                  "careAlert helped me during a medical emergency when I was alone at home. The ambulance arrived within
+                  "SafeNest helped me during a medical emergency when I was alone at home. The ambulance arrived within
                   minutes, and my emergency contacts were notified immediately. This service saved my life."
                 </p>
                 <div className="flex items-center gap-3">
@@ -285,7 +285,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
               >
                 <p className="italic text-white/80 mb-4">
-                  "The self-defense classes I took through careAlert gave me the confidence to walk alone at night. The
+                  "The self-defense classes I took through SafeNest gave me the confidence to walk alone at night. The
                   instructors were professional and taught practical techniques that are easy to remember."
                 </p>
                 <div className="flex items-center gap-3">
@@ -314,7 +314,7 @@ export default function HomePage() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Safety Network Today</h2>
               <p className="text-xl text-white/80 mb-8">
-                Register now to access all careAlert features and become part of a community dedicated to safety for
+                Register now to access all SafeNest features and become part of a community dedicated to safety for
                 all.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -342,7 +342,7 @@ export default function HomePage() {
               <Link href="/" className="flex items-center gap-2 mb-4">
                 <Shield className="h-6 w-6 text-orange-500" />
                 <span className="font-bold text-xl tracking-tight">
-                  care<span className="text-orange-500">Alert</span>
+                  Safe<span className="text-orange-500">Nest</span>
                 </span>
               </Link>
               <p className="text-white/60 text-sm">
@@ -400,14 +400,14 @@ export default function HomePage() {
             <div>
               <h3 className="font-bold mb-4">Contact</h3>
               <ul className="space-y-2">
-                <li className="text-white/60 text-sm">support@carealert.com</li>
+                <li className="text-white/60 text-sm">support@SafeNest.com</li>
                 <li className="text-white/60 text-sm">Emergency Hotline: 1-800-SAFE-NOW</li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/40 text-sm">
-            &copy; {new Date().getFullYear()} careAlert. All rights reserved. Safety for All.
+            &copy; {new Date().getFullYear()} SafeNest. All rights reserved. Safety for All.
           </div>
         </div>
       </footer>

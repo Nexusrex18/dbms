@@ -47,7 +47,7 @@ export default function LoginPage() {
         <Link href="/" className="absolute top-8 left-8 flex items-center gap-2">
           <Shield className="h-6 w-6 text-orange-500" />
           <span className="font-bold text-xl tracking-tight">
-            care<span className="text-orange-500">Alert</span>
+            Safe<span className="text-orange-500">Nest</span>
           </span>
         </Link>
 
@@ -59,7 +59,7 @@ export default function LoginPage() {
         >
           <div className="text-center mb-8">
             <h1 className="text-2xl font-bold">Welcome Back</h1>
-            <p className="text-white/60 mt-2">Sign in to access your careAlert account</p>
+            <p className="text-white/60 mt-2">Sign in to access your SafeNest account</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">

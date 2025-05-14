@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "careAlert - Safety for All",
+  title: "SafeNest - Safety for All",
   description: "A safety platform providing emergency assistance, community support, and self-defense training.",
     generator: 'v0.dev'
 }

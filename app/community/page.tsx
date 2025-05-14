@@ -22,7 +22,7 @@ export default function CommunityPage() {
       authorInitials: "SM",
       time: "2 hours ago",
       content:
-        "I want to share my experience with the careAlert app. Last month, I was walking home late at night when I felt someone following me. I immediately pressed the SOS button, and within minutes, police arrived. The person following me ran away when they saw the police. I'm so grateful for this app - it truly made me feel safe in a scary situation.",
+        "I want to share my experience with the SafeNest app. Last month, I was walking home late at night when I felt someone following me. I immediately pressed the SOS button, and within minutes, police arrived. The person following me ran away when they saw the police. I'm so grateful for this app - it truly made me feel safe in a scary situation.",
       likes: 24,
       comments: 5,
       shares: 3,
@@ -33,7 +33,7 @@ export default function CommunityPage() {
       authorInitials: "RJ",
       time: "1 day ago",
       content:
-        "The self-defense class I took through careAlert was incredible! The instructor was patient and taught us practical techniques that don't require a lot of strength. I feel much more confident now when I'm out alone. I highly recommend these classes to everyone, regardless of age or fitness level.",
+        "The self-defense class I took through SafeNest was incredible! The instructor was patient and taught us practical techniques that don't require a lot of strength. I feel much more confident now when I'm out alone. I highly recommend these classes to everyone, regardless of age or fitness level.",
       likes: 42,
       comments: 8,
       shares: 12,
@@ -44,7 +44,7 @@ export default function CommunityPage() {
       authorInitials: "PK",
       time: "3 days ago",
       content:
-        "I just wanted to thank the careAlert team for creating such an important app. As someone who often works late shifts, having the ability to quickly alert emergency services and my family if something happens gives me peace of mind. The community support here is also amazing - it's comforting to know we're all looking out for each other.",
+        "I just wanted to thank the SafeNest team for creating such an important app. As someone who often works late shifts, having the ability to quickly alert emergency services and my family if something happens gives me peace of mind. The community support here is also amazing - it's comforting to know we're all looking out for each other.",
       likes: 37,
       comments: 4,
       shares: 7,
@@ -102,7 +102,7 @@ export default function CommunityPage() {
           <Link href="/" className="flex items-center gap-2">
             <Shield className="h-8 w-8 text-orange-500" />
             <span className="font-bold text-2xl tracking-tight">
-              care<span className="text-orange-500">Alert</span>
+              Safe<span className="text-orange-500">Nest</span>
             </span>
           </Link>
 
@@ -277,7 +277,7 @@ export default function CommunityPage() {
       <footer className="relative z-10 border-t border-white/10 bg-black/50 backdrop-blur-sm mt-12">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-white/40 text-sm">
-            &copy; {new Date().getFullYear()} careAlert. All rights reserved. Safety for All.
+            &copy; {new Date().getFullYear()} SafeNest. All rights reserved. Safety for All.
           </div>
         </div>
       </footer>

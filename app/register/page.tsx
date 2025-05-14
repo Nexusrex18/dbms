@@ -53,7 +53,7 @@ export default function RegisterPage() {
         <Link href="/" className="absolute top-8 left-8 flex items-center gap-2">
           <Shield className="h-6 w-6 text-orange-500" />
           <span className="font-bold text-xl tracking-tight">
-            care<span className="text-orange-500">Alert</span>
+            Safe<span className="text-orange-500">Nest</span>
           </span>
         </Link>
 
@@ -64,7 +64,7 @@ export default function RegisterPage() {
           className="w-full max-w-2xl bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/10"
         >
           <div className="text-center mb-8">
-            <h1 className="text-2xl font-bold">Create Your careAlert Account</h1>
+            <h1 className="text-2xl font-bold">Create Your SafeNest Account</h1>
             <p className="text-white/60 mt-2">Join our community and stay safe</p>
           </div>
 

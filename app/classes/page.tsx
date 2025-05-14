@@ -106,7 +106,7 @@ export default function ClassesPage() {
           <Link href="/" className="flex items-center gap-2">
             <Shield className="h-8 w-8 text-orange-500" />
             <span className="font-bold text-2xl tracking-tight">
-              care<span className="text-orange-500">Alert</span>
+              Safe<span className="text-orange-500">Nest</span>
             </span>
           </Link>
 
@@ -355,7 +355,7 @@ export default function ClassesPage() {
       <footer className="relative z-10 border-t border-white/10 bg-black/50 backdrop-blur-sm mt-12">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-white/40 text-sm">
-            &copy; {new Date().getFullYear()} careAlert. All rights reserved. Safety for All.
+            &copy; {new Date().getFullYear()} SafeNest. All rights reserved. Safety for All.
           </div>
         </div>
       </footer>
