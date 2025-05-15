@@ -2,34 +2,43 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Shield, ArrowRight } from "lucide-react"
+import { Shield, ArrowRight, AlertCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { useAuth } from "@/lib/auth-context"
+import { useRouter } from "next/navigation"
+import Header from "@/components/header"
 
 export default function LoginPage() {
-  const [isLoading, setIsLoading] = useState(false)
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const { login, loading: isLoading, error, user, clearError } = useAuth()
+  const router = useRouter()
+  
+  useEffect(() => {
+    // If user is already logged in, redirect to home page
+    if (user) {
+      router.push("/")
+    }
+  }, [user, router])
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsLoading(true)
-
-    // Simulate login process
-    setTimeout(() => {
-      setIsLoading(false)
-      window.location.href = "/"
-    }, 1500)
+    await login(email, password)
   }
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden relative">
+      <Header />
       {/* Animated Background */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-black"
+          className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-black pointer-events-none"
           animate={{
             backgroundPosition: [`0% 0%`, `100% 100%`],
           }}
@@ -39,17 +48,11 @@ export default function LoginPage() {
             repeatType: "reverse",
           }}
         />
-        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover opacity-10 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover opacity-10 mix-blend-overlay pointer-events-none" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-4">
-        <Link href="/" className="absolute top-8 left-8 flex items-center gap-2">
-          <Shield className="h-6 w-6 text-orange-500" />
-          <span className="font-bold text-xl tracking-tight">
-            Safe<span className="text-orange-500">Nest</span>
-          </span>
-        </Link>
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-4 pt-16">
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -62,6 +65,13 @@ export default function LoginPage() {
             <p className="text-white/60 mt-2">Sign in to access your SafeNest account</p>
           </div>
 
+          {error && (
+            <Alert variant="destructive" className="bg-red-900/30 border-red-900/50 text-white">
+              <AlertCircle className="h-4 w-4" />
+              <AlertDescription>{error}</AlertDescription>
+            </Alert>
+          )}
+          
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
@@ -69,6 +79,8 @@ export default function LoginPage() {
                 id="email"
                 type="email"
                 placeholder="your@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
                 className="bg-white/10 border-white/20 text-white placeholder:text-white/40"
               />
@@ -85,6 +97,8 @@ export default function LoginPage() {
                 id="password"
                 type="password"
                 placeholder="••••••••"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 required
                 className="bg-white/10 border-white/20 text-white placeholder:text-white/40"
               />
